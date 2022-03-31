@@ -2,9 +2,10 @@
 <suite name="TestSuite" parallel="methods" thread-count="2" >
     <test name="test">
         <classes>
-            <class name="Get_Call_Test">
-            <class name="Put_call_Test">
-            </class>
+            <class name="Get_Call_Test"/>
+            <class name="Put_call_Test"/>
+            <class name="Get_Call_SB_Test"/>
+            <class name="Put_Call_SB_Test"/>
         </classes>
     </test>
 </suite>

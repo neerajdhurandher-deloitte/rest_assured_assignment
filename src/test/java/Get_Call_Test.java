@@ -1,4 +1,6 @@
+import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import org.json.JSONArray;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import static io.restassured.RestAssured.*;
@@ -35,6 +37,15 @@ public class Get_Call_Test {
 
     @Test
     public void titleTypeValidation(){
-        assertThat(response.path("[]"),hasProperty("title"));
+        JSONArray array = new JSONArray(response.asString());
+        int flag = 1;
+        for(int i=0;i<array.length();i++){
+            Object obj = array.getJSONObject(i).get("title");
+            if( !(obj instanceof String) ) {
+                flag = 0;
+                break;
+            }
+        }
+        assertThat(flag,is(equalTo(1)));
     }
 }
