@@ -17,6 +17,8 @@ import org.testng.annotations.BeforeTest;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
+
 public class UserBaseTest implements BaseTestInterface {
 
     public static final String baseUrl = "https://api-nodejs-todolist.herokuapp.com";
@@ -72,5 +74,10 @@ public class UserBaseTest implements BaseTestInterface {
     public void contentTypeValidation(ResponseSpecification responseSpecification){
         responseSpecification.expect().contentType(ContentType.JSON);
         log.info("Content type is JSON");
+    }
+
+    @Override
+    public void responseValidation(ResponseSpecification responseSpecification, String jsonSchema){
+        responseSpecification.expect().body(matchesJsonSchemaInClasspath(jsonSchema));
     }
 }

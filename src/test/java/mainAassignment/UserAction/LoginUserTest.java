@@ -6,8 +6,9 @@ import mainAassignment.Interfaces.SingleTestInterface;
 import mainAassignment.TaskAction.AddTaskTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 import static io.restassured.RestAssured.given;
+
 
 public class LoginUserTest extends UserBaseTest implements SingleTestInterface {
 
@@ -66,8 +67,11 @@ public class LoginUserTest extends UserBaseTest implements SingleTestInterface {
         super.contentTypeValidation(responseSpecification);
     }
 
-
-
+    @Override
+    @Test(priority = 1)
+    public void responseValidation(){
+        super.responseValidation(responseSpecification,"user_json_schema.json");
+    }
 
 
 

@@ -7,4 +7,6 @@ public interface SingleTestInterface {
     void statusCodeValidation();
 
     void contentTypeValidation();
+
+    void responseValidation();
 }

@@ -16,4 +16,7 @@ public interface BaseTestInterface {
 
     void contentTypeValidation(ResponseSpecification responseSpecification);
 
+    void responseValidation(ResponseSpecification responseSpecification, String jsonSchema);
+
+
     }

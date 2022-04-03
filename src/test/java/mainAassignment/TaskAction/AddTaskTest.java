@@ -60,4 +60,9 @@ public class AddTaskTest extends TaskBaseTest implements SingleTestInterface {
         super.contentTypeValidation(responseSpecification);
     }
 
+    @Override
+    public void responseValidation() {
+        super.responseValidation(responseSpecification,"task_json_schema.json");
+    }
+
 }

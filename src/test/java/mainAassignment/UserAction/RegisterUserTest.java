@@ -61,4 +61,10 @@ public class RegisterUserTest extends  UserBaseTest implements SingleTestInterfa
     public void contentTypeValidation(){
         super.contentTypeValidation(responseSpecification);
     }
+
+    @Override
+    @Test(priority = 1)
+    public void responseValidation() {
+        super.responseValidation(responseSpecification,"user_json_schema.json");
+    }
 }
