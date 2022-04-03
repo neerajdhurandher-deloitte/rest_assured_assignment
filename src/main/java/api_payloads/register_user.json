@@ -1,0 +1,12 @@
+{
+  "user": {
+    "age": 21,
+    "_id": "6246b1a9d7e6c200175d6153",
+    "name": "Neeraj Dhurandher",
+    "email": "neeraj123@gmail.com",
+    "createdAt": "2022-04-01T08:02:49.627Z",
+    "updatedAt": "2022-04-01T08:02:49.917Z",
+    "__v": 1
+  },
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQ2YjFhOWQ3ZTZjMjAwMTc1ZDYxNTMiLCJpYXQiOjE2NDg4MDAxNjl9.ph8rITOgwcbjgpjVzrlhEMEvo33Xl1EASUJdmRLxO6g"
+}
