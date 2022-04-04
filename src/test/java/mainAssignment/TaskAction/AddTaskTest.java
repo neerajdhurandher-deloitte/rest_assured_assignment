@@ -35,7 +35,7 @@ public class AddTaskTest extends TaskBaseTest implements SingleTestInterface {
 
 
         String data = "{\n" +
-                    "\t\"description\":\""+newTasksList.get(0)+"\",\n" +
+                    "\t\"description\":\""+newTasksList.get(0)+"\"\n" +
                 "}";
 
 //      String a = "{\n" +
@@ -86,6 +86,7 @@ public class AddTaskTest extends TaskBaseTest implements SingleTestInterface {
     }
 
     @Override
+    @Test(priority = 1)
     public void responseValidation() {
         super.responseValidation(responseSpecification,"task_json_schema.json");
         extentTest.log(Status.PASS,"Response Validation successful");

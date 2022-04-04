@@ -45,7 +45,7 @@ public class TaskBaseTest extends BaseTest implements BaseTestInterface {
 
     @Override
     public ResponseSpecBuilder getResponseSpecBuilder() {
-        return responseSpecBuilder.expectHeader("Content-Type", Matchers.equalTo("text/html; charset=utf-8"));
+        return responseSpecBuilder.expectHeader("Content-Type", Matchers.equalTo("application/json; charset=utf-8"));
     }
 
     @Override

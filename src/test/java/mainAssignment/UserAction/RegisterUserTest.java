@@ -36,11 +36,12 @@ public class RegisterUserTest extends  UserBaseTest implements SingleTestInterfa
     public void registerUser(){
 
         String data = "{\n" +
-                "\t\"name\": \""+name+"\",\n" +
-                "\t\"email\": \""+email+"\"@gmail.com\",\n" +
-                "\t\"password\": \""+password+"\",\n" +
-                "\t\"age\": "+age+",\n" +
+                "   \"name\": \""+name+"\",\n" +
+                "   \"email\": \""+email+"@gmail.com\",\n" +
+                "   \"password\": \""+password+"\",\n" +
+                "   \"age\": "+age+"\n" +
                 "}";
+
 
         requestSpecification = super.getRequestSpecBuilder().setBasePath(registerPath).setBody(data).build();
         responseSpecification = super.getResponseSpecBuilder().build();

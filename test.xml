@@ -7,9 +7,9 @@
         <parameter name="limit" value="10"></parameter>
 
         <classes>
-            <class name="mainAssignment.UserAction.RegisterUserTest"></class>
-            <class name="mainAssignment.UserAction.LoginUserTest"></class>
-            <class name="mainAssignment.TaskAction.AddTaskTest"></class>
+<!--            <class name="mainAssignment.UserAction.RegisterUserTest"></class>-->
+<!--            <class name="mainAssignment.UserAction.LoginUserTest"></class>-->
+<!--            <class name="mainAssignment.TaskAction.AddTaskTest"></class>-->
             <class name="mainAssignment.TaskAction.GetTaskTest"></class>
         </classes>
     </test>

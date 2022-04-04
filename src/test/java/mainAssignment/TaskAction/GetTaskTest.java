@@ -30,12 +30,11 @@ public class GetTaskTest extends TaskBaseTest implements SingleTestInterface {
     @Parameters("limit")
     @Test
     public void getTask(String noOfData) {
+
         log.info("add task test int");
+
         extentTest.log(Status.PASS,"Get task test setup");
 
-        String data = "{\n" +
-                "\"description\":" + newTasksList.get(0) + ",\n" +
-                "}";
 
         requestSpecification = super.getRequestSpecBuilder().setBasePath(getTaskPath + noOfData).addHeader("Authorization",
                 "Bearer " + user.getToken()).build();
@@ -48,7 +47,7 @@ public class GetTaskTest extends TaskBaseTest implements SingleTestInterface {
 
         if (response.getStatusCode() == 200) {
 
-            System.out.println("des " + response.body().jsonPath().getString("data.description"));
+            System.out.println("des " + response.body().jsonPath().getString("data[0].description"));
 
             TaskCreator taskCreator = new TaskCreator(response);
 
@@ -80,6 +79,7 @@ public class GetTaskTest extends TaskBaseTest implements SingleTestInterface {
     }
 
     @Override
+    @Test(priority = 1)
     public void responseValidation() {
         super.responseValidation(responseSpecification,"task_json_schema.json");
         extentTest.log(Status.PASS,"Response Validation successful");

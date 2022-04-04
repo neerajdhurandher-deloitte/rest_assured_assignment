@@ -82,13 +82,13 @@ public class TaskSheetHandler extends XlsxReader{
                 cell.setCellValue( (Boolean)obj );
         }
 
-        System.out.println("User details :- " + Arrays.toString(taskObjArray));
+        System.out.println("Task details :- " + Arrays.toString(taskObjArray));
 
         try {
             outputStream = new FileOutputStream(file);
             workbook.write(outputStream);
             outputStream.close();
-            System.out.println("User added in sheet at row " + workbookSheet.getPhysicalNumberOfRows());
+            System.out.println("Task added in sheet at row " + workbookSheet.getPhysicalNumberOfRows());
         }
         catch (Exception e) {
             e.printStackTrace();

@@ -23,7 +23,6 @@ public class TaskCreator {
         task.setOwner(jsonPath.getString("data.owner"));
         task.setCreatedAt(jsonPath.getString("data.createdAt"));
         task.setUpdatedAt(jsonPath.getString("data.updatedAt"));
-        task.setV(jsonPath.getInt("__v"));
 
 
         return task;
