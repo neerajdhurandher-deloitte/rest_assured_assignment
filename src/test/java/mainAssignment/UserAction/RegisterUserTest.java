@@ -36,9 +36,9 @@ public class RegisterUserTest extends  UserBaseTest implements SingleTestInterfa
     public void registerUser(){
 
         String data = "{\n" +
-                "\t\"name\": "+name+",\n" +
-                "\t\"email\": "+email+"\"@gmail.com\",\n" +
-                "\t\"password\": "+password+",\n" +
+                "\t\"name\": \""+name+"\",\n" +
+                "\t\"email\": \""+email+"\"@gmail.com\",\n" +
+                "\t\"password\": \""+password+"\",\n" +
                 "\t\"age\": "+age+",\n" +
                 "}";
 

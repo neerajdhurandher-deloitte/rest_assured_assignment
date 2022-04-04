@@ -35,8 +35,8 @@ public class LoginUserTest extends UserBaseTest implements SingleTestInterface {
         log.info("login test int");
 
         String data = "{\n" +
-                "    \"email\":"+inputUser.getEmail()+",\n" +
-                "    \"password\":"+inputUser.getPassword()+" \n" +
+                "    \"email\":\""+inputUser.getEmail()+"\",\n" +
+                "    \"password\":\""+inputUser.getPassword()+"\" \n" +
                 "}";
 
 //        String data = "";

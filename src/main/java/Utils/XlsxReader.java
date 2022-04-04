@@ -14,7 +14,6 @@ import java.util.Arrays;
 
 public class XlsxReader {
      String filePath;
-     ArrayList<User> userResponsesList = new ArrayList<>();
      File file;
      FileInputStream inputStream;
      FileOutputStream outputStream;

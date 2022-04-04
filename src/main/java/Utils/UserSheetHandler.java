@@ -57,7 +57,7 @@ public class UserSheetHandler extends XlsxReader{
             userList.add(user);
         }
 
-        return userResponsesList;
+        return userList;
     }
 
     public void addUserData(User user) {

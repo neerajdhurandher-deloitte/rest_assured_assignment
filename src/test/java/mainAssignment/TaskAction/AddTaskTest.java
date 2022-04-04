@@ -24,7 +24,6 @@ public class AddTaskTest extends TaskBaseTest implements SingleTestInterface {
         log.info("add task test before ");
 
         user = userList.get(0);
-
     }
 
 
@@ -36,8 +35,12 @@ public class AddTaskTest extends TaskBaseTest implements SingleTestInterface {
 
 
         String data = "{\n" +
-                    "\"description\":"+newTasksList.get(0)+",\n" +
+                    "\t\"description\":\""+newTasksList.get(0)+"\",\n" +
                 "}";
+
+//      String a = "{\n" +
+//              "\t\"description\": \"adding new task\"\n" +
+//              "}";
 
         requestSpecification = super.getRequestSpecBuilder().setBasePath(addTaskPath).addHeader(  "Authorization",
                 "Bearer " + user.getToken()).setBody(data).build();

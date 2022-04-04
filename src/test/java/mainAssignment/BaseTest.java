@@ -42,7 +42,6 @@ public class BaseTest {
             userSheetHandler = new UserSheetHandler("src/main/java/Utils/UserDetails.xlsx");
             userList = userSheetHandler.readUserFile();
             extentTest.log(Status.PASS,"successfully read user list");
-            System.out.println(userList.get(0).getName());
 
         }catch (IOException e){
             log.error(e.getMessage());
