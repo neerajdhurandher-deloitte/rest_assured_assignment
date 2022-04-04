@@ -50,6 +50,7 @@ public class UserSheetHandler extends XlsxReader{
                     case 5-> user.setUpdatedAt(data);
                     case 6-> user.setV((int)row.getCell(j).getNumericCellValue());
                     case 7-> user.setToken(data);
+                    case 8-> user.setPassword(data);
                 }
             }
 
@@ -69,7 +70,7 @@ public class UserSheetHandler extends XlsxReader{
 
         Object [] userObjArray = new Object[]{
                 user.getAge(),user.getId(),user.getName(),user.getEmail(),
-                user.getCreatedAt(),user.getUpdatedAt(),user.getV(),user.getToken()
+                user.getCreatedAt(),user.getUpdatedAt(),user.getV(),user.getToken(),user.getPassword()
         };
 
         int cellNumber = 0;

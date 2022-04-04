@@ -1,12 +1,16 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="TestSuite" parallel="methods" thread-count="2" >
     <test name="test">
+        
+        <parameter name="limit" value="2"></parameter>
+        <parameter name="limit" value="5"></parameter>
+        <parameter name="limit" value="10"></parameter>
+
         <classes>
-<!--            <class name="Get_Call_Test"/>-->
-<!--            <class name="Put_call_Test"/>-->
-<!--            <class name="Get_Call_SB_Test"/>-->
-<!--            <class name="Put_Call_SB_Test"/>-->
-<!--            <class name="LoginTest"/>-->
+            <class name="mainAssignment.UserAction.RegisterUserTest"></class>
+            <class name="mainAssignment.UserAction.LoginUserTest"></class>
+            <class name="mainAssignment.TaskAction.AddTaskTest"></class>
+            <class name="mainAssignment.TaskAction.GetTaskTest"></class>
         </classes>
     </test>
 </suite>

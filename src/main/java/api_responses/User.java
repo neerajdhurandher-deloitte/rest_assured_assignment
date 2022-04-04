@@ -6,6 +6,7 @@ public class User {
     private String id;
     private String name;
     private String email;
+    private String password;
     private String createdAt;
     private String updatedAt;
     private Integer v;
@@ -15,17 +16,13 @@ public class User {
     public User() {
     }
 
-    public User(Integer age, String id, String name, String email, String createdAt, String updatedAt, Integer v) {
-        this.age = age;
-        this.id = id;
-        this.name = name;
-        this.email = email;
-        this.createdAt = createdAt;
-        this.updatedAt = updatedAt;
-        this.v = v;
+    public String getPassword() {
+        return password;
     }
 
-
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
     public Integer getAge() {
         return age;
